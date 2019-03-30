@@ -7,7 +7,7 @@ module.exports = function(app) {
     });
   
     post.get("/api/friends", function(req, res) {
-      res.json(req.body.score);
+      res.json(req.body.scores);
 
     var smallestCompScore = 99999;
     var smallestPerson;
@@ -17,8 +17,7 @@ module.exports = function(app) {
       
       var currentScore = 0;
       //compare each old friend with new friend
-      //looping thru the score from 0-9
-    for (var scoreIndex = 0; scoreIndex < 10; scoreIndex ++) {
+    for (var scoreIndex = 0; scoreIndex < 5; scoreIndex ++) {
         //modify current score
         currentScore = 
         currentScore + 
@@ -26,13 +25,12 @@ module.exports = function(app) {
         Math.abs(newFriend.scores[scoreIndex] - oldFriends[i].scores[scoreIndex]);
     }
     //update compareScores list
-    // compareScores.push(currentScore)
     if (currentScore < smallestCompScore) {
         smallestCompScore = currentScore;
         smallestPerson = oldFriends[i];
     }
   }
-  friends.push()
+  friends.push(newFriend);
 
     });
 

@@ -22,7 +22,7 @@ var friends = [
     {
         name: "David Lo Pan",
         photo: "https://vignette.wikia.nocookie.net/villains/images/6/62/Lo-Pan.jpg/revision/latest?cb=20130911024937",
-        scores: [1, 2, 3, 4, 5]
+        scores: [5, 2, 3, 4, 5]
     },
     {
         name: "Cersei Lannister",
