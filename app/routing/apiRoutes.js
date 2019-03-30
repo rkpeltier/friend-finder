@@ -6,8 +6,10 @@ module.exports = function(app) {
       res.json(friends);
     });
   
-    post.get("/api/friends", function(req, res) {
+    app.post("/api/friends", function(req, res) {
       res.json(req.body.scores);
+
+    var addNew = req.body
 
     var smallestCompScore = 99999;
     var smallestPerson;
@@ -30,8 +32,8 @@ module.exports = function(app) {
         smallestPerson = oldFriends[i];
     }
   }
-  friends.push(newFriend);
+  friends.push(addNew);
 
-    });
+});
 
 }
